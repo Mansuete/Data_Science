@@ -1,0 +1,1320 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>РОЗКЛАД</title>
+
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="shortcut icon" href={% static 'img/favicon.png' %} type="image/x-icon">
+
+  </head>
+  <body>
+    {% include 'header.html' %}
+    <div class="container" style="margin-bottom: 10px">
+        <div class="row nav_but text-center">
+              <a href="/" class="btn btn-primary">Розклад занять</a>
+              <a href="/teacher/" class="btn ">Розклад для викладачів</a>
+        </div>
+    </div>
+  <div class="table-responsive comp">
+    <div class="group_name text-center">
+      <h3>Розклад занять для {{ q }} групи</h3>
+    </div>
+      <div align="center" style="margin:40px 30px 30px 30px">
+        <table class="tabe_week">
+          <tbody>
+            <tr>
+              <td width="1"></td>
+              <td>Понеділок</td>
+              <td>Вівторок</td>
+              <td>Середа</td>
+              <td>Четвер</td>
+              <td>П'ятниця</td>
+            </tr>
+            <tr>
+              <td>1 <br> 08:30</td>
+                <td>
+                    {% if week1_day1_lesson1 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day1_lesson1.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day1_lesson1.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day1_lesson1.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day2_lesson1 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day2_lesson1.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day2_lesson1.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day2_lesson1.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day3_lesson1 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day3_lesson1.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day3_lesson1.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day3_lesson1.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day4_lesson1 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day4_lesson1.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day4_lesson1.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day4_lesson1.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day5_lesson1 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day5_lesson1.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day5_lesson1.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day5_lesson1.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+            </tr>
+            <tr>
+              <td>2 <br> 09:25</td>
+              <td>
+                    {% if week1_day1_lesson2 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day1_lesson2.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day1_lesson2.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day1_lesson2.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day2_lesson2 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day2_lesson2.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day2_lesson2.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day2_lesson2.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day3_lesson2 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day3_lesson2.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day3_lesson2.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day3_lesson2.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day4_lesson2 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day4_lesson2.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day4_lesson2.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day4_lesson2.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day5_lesson2 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day5_lesson2.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day5_lesson2.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day5_lesson2.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+            </tr>
+            <tr>
+              <td>3 <br> 10:20</td>
+              <td>
+                    {% if week1_day1_lesson3 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day1_lesson3.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day1_lesson3.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day1_lesson3.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day2_lesson3 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day2_lesson3.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day2_lesson3.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day2_lesson3.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day3_lesson3 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day3_lesson3.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day3_lesson3.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day3_lesson3.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day4_lesson3 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day4_lesson3.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day4_lesson3.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day4_lesson3.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day5_lesson3 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day5_lesson3.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day5_lesson3.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day5_lesson3.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+            </tr>
+            <tr>
+                <td>4 <br> 11:15</td>
+              <td>
+                    {% if week1_day1_lesson4 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day1_lesson4.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day1_lesson4.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day1_lesson4.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day2_lesson4 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day2_lesson4.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day2_lesson4.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day2_lesson4.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day3_lesson4 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day3_lesson4.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day3_lesson4.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day3_lesson4.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day4_lesson4 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day4_lesson4.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day4_lesson4.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day4_lesson4.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                   {% if week1_day5_lesson4 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day5_lesson4.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day5_lesson4.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day5_lesson4.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+            </tr>
+            <tr>
+              <td>5 <br> 12:20</td>
+              <td>
+                    {% if week1_day1_lesson5 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day1_lesson5.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day1_lesson5.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day1_lesson5.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day2_lesson5 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day2_lesson5.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day2_lesson5.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day2_lesson5.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day3_lesson5 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day3_lesson5.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day3_lesson5.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day3_lesson5.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day4_lesson5 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day4_lesson5.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day4_lesson5.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day4_lesson5.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day5_lesson5 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day5_lesson5.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day5_lesson5.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day5_lesson5.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+            </tr>
+            <tr>
+              <td>6 <br> 13:15</td>
+              <td>
+                    {% if week1_day1_lesson6 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day1_lesson6.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day1_lesson6.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day1_lesson6.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day2_lesson6 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day2_lesson6.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day2_lesson6.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day2_lesson6.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day3_lesson6 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day3_lesson6.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day3_lesson6.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day3_lesson6.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                   {% if week1_day4_lesson6 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day4_lesson6.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day4_lesson6.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day4_lesson6.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                   {% if week1_day5_lesson6 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day5_lesson6.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day5_lesson6.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day5_lesson6.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+            </tr>
+            <tr>
+              <td>7 <br> 14:10</td>
+             <td>
+                    {% if week1_day1_lesson7 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day1_lesson7.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day1_lesson7.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day1_lesson7.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day2_lesson7 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day2_lesson7.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day2_lesson7.teacher|default_if_none:""|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day2_lesson7.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day3_lesson7 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day3_lesson7.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day3_lesson7.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day3_lesson7.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day4_lesson7 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day4_lesson7.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day4_lesson7.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day4_lesson7.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day5_lesson7 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day5_lesson7.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day5_lesson7.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day5_lesson7.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+            </tr>
+            <tr>
+              <td>8 <br> 15:05</td>
+             <td>
+                    {% if week1_day1_lesson8 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day1_lesson8.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day1_lesson8.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day1_lesson8.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day2_lesson8 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day2_lesson8.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day2_lesson8.teacher|default_if_none:""|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day2_lesson8.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day3_lesson8 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day3_lesson8.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day3_lesson8.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day3_lesson8.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day4_lesson8 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day4_lesson8.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day4_lesson8.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day4_lesson8.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+                <td>
+                    {% if week1_day5_lesson8 != '' %}
+                        <span class="pair_name">
+                            <p>{{ week1_day5_lesson8.lesson_name.lesson_name }}</p>
+                        </span>
+                    {% endif %}
+                    <br>
+                    <p>
+                        {{ week1_day5_lesson8.teacher|default_if_none:"" }}
+                    </p>
+                    <br>
+                   <p>
+                     {{ week1_day5_lesson8.room_number|default_if_none:"" }}
+                   </p>
+                </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+
+
+    <div class="table-responsive mobila">
+        <div class="group_name text-center">
+          <h3>Розклад занять для {{ q }}</h3>
+        </div>
+
+        <div align="center" style="margin:0 30px 30px 30px">
+        <table class="tabe_week">
+          <tbody>
+            <tr>
+              <td width="10%"></td>
+              <td>Понеділок</td>
+            </tr>
+            <tr>
+              <td>1 <br> 08:30</td>
+                <td>{% if week1_day1_lesson1 != '' %}
+                  <span class="pair_name">
+                      <p>{{ week1_day1_lesson1.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day1_lesson1.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day1_lesson1.room_number|default_if_none:"" }}
+             </p>
+           </td>
+            </tr>
+            <tr>
+              <td>2 <br> 09:25</td>
+              <td>{% if week1_day1_lesson2 != '' %}<span class="pair_name">
+                      <p>{{ week1_day1_lesson2.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day1_lesson2.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day1_lesson2.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>3 <br> 10:20</td>
+              <td>{% if week1_day1_lesson3 != '' %}<span class="pair_name">
+                      <p>{{ week1_day1_lesson3.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day1_lesson3.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day1_lesson3.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>4 <br> 11:15</td>
+              <td>{% if week1_day1_lesson4 != '' %}<span class="pair_name">
+                      <p>{{ week1_day1_lesson4.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day1_lesson4.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day1_lesson4.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>5 <br> 12:20</td>
+              <td>{% if week1_day1_lesson5 != '' %}<span class="pair_name">
+                      <p>{{ week1_day1_lesson5.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day1_lesson5.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day1_lesson5.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>6 <br> 13:15</td>
+              <td>{% if week1_day1_lesson6 != '' %}<span class="pair_name">
+                      <p>{{ week1_day1_lesson6.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day1_lesson6.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day1_lesson6.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>7 <br> 14:10</td>
+              <td>{% if week1_day1_lesson7 != '' %}<span class="pair_name">
+                      <p>{{ week1_day1_lesson7.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day1_lesson7.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day1_lesson7.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>8 <br> 15:05</td>
+              <td>{% if week1_day1_lesson8 != '' %}<span class="pair_name">
+                      <p>{{ week1_day1_lesson8.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day1_lesson8.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day1_lesson8.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Вівторок</td>
+            </tr>
+            <tr>
+              <td>1 <br> 08:30</td>
+              <td>{% if week1_day2_lesson1 != '' %}<span class="pair_name">
+                      <p>{{ week1_day2_lesson1.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day2_lesson1.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day2_lesson1.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>2 <br> 09:25</td>
+              <td>{% if week1_day2_lesson2 != '' %}<span class="pair_name">
+                      <p>{{ week1_day2_lesson2.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day2_lesson2.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day2_lesson2.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>3 <br> 10:20</td>
+              <td>{% if week1_day2_lesson3 != '' %}<span class="pair_name">
+                      <p>{{ week1_day2_lesson3.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day2_lesson3.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day2_lesson3.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>4 <br> 11:15</td>
+              <td>{% if week1_day2_lesson4 != '' %}<span class="pair_name">
+                      <p>{{ week1_day2_lesson4.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day2_lesson4.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day2_lesson4.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>5 <br> 12:20</td>
+              <td>{% if week1_day2_lesson5 != '' %}<span class="pair_name">
+                      <p>{{ week1_day2_lesson5.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day2_lesson5.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day2_lesson5.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>6 <br> 13:15</td>
+              <td>{% if week1_day2_lesson6 != '' %}<span class="pair_name">
+                      <p>{{ week1_day2_lesson6.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day2_lesson6.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day2_lesson6.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>7 <br> 14:10</td>
+              <td>{% if week1_day2_lesson7 != '' %}<span class="pair_name">
+                      <p>{{ week1_day2_lesson7.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day2_lesson7.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day2_lesson7.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>8 <br> 15:05</td>
+              <td>{% if week1_day2_lesson8 != '' %}<span class="pair_name">
+                      <p>{{ week1_day2_lesson8.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day2_lesson8.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day2_lesson8.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Середа</td>
+            </tr>
+            <tr>
+              <td>1 <br> 08:30</td>
+              <td>{% if week1_day3_lesson1 != '' %}<span class="pair_name">
+                      <p>{{ week1_day3_lesson1.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day3_lesson1.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day3_lesson1.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>2 <br> 09:25</td>
+              <td>{% if week1_day3_lesson2 != '' %}<span class="pair_name">
+                      <p>{{ week1_day3_lesson2.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day3_lesson2.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day3_lesson2.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>3 <br> 10:20</td>
+              <td>{% if week1_day3_lesson3 != '' %}<span class="pair_name">
+                      <p>{{ week1_day3_lesson3.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day3_lesson1.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day3_lesson3.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>4 <br> 11:15</td>
+              <td>{% if week1_day3_lesson4 != '' %}<span class="pair_name">
+                      <p>{{ week1_day3_lesson4.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day3_lesson4.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day3_lesson4.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>5 <br> 12:20</td>
+              <td>{% if week1_day3_lesson5 != '' %}<span class="pair_name">
+                      <p>{{ week1_day3_lesson5.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day3_lesson5.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day3_lesson5.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>6 <br> 13:15</td>
+              <td>{% if week1_day3_lesson6 != '' %}<span class="pair_name">
+                      <p>{{ week1_day3_lesson6.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day3_lesson6.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day3_lesson6.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>7 <br> 14:10</td>
+              <td>{% if week1_day3_lesson7 != '' %}<span class="pair_name">
+                      <p>{{ week1_day3_lesson7.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day3_lesson7.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day3_lesson7.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>8 <br> 15:05</td>
+              <td>{% if week1_day3_lesson8 != '' %}<span class="pair_name">
+                      <p>{{ week1_day3_lesson8.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day3_lesson8.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day3_lesson8.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Четвер</td>
+            </tr>
+            <tr>
+              <td>1 <br> 08:30</td>
+              <td>{% if week1_day4_lesson1 != '' %}<span class="pair_name">
+                      <p>{{ week1_day4_lesson1.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day4_lesson1.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day4_lesson1.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>2 <br> 09:25</td>
+              <td>{% if week1_day4_lesson2 != '' %}<span class="pair_name">
+                      <p>{{ week1_day4_lesson2.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day4_lesson2.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day4_lesson2.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>3 <br> 10:20</td>
+              <td>{% if week1_day4_lesson3 != '' %}<span class="pair_name">
+                      <p>{{ week1_day4_lesson3.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day4_lesson3.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day4_lesson3.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>4 <br> 11:15</td>
+              <td>{% if week1_day4_lesson4 != '' %}<span class="pair_name">
+                      <p>{{ week1_day4_lesson4.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day4_lesson4.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day4_lesson4.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>5 <br> 12:20</td>
+              <td>{% if week1_day4_lesson5 != '' %}<span class="pair_name">
+                      <p>{{ week1_day4_lesson5.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day4_lesson5.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day4_lesson5.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>6 <br> 13:15</td>
+              <td>{% if week1_day4_lesson6 != '' %}<span class="pair_name">
+                      <p>{{ week1_day4_lesson6.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day4_lesson6.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day4_lesson6.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>7 <br> 14:10</td>
+              <td>{% if week1_day4_lesson7 != '' %}<span class="pair_name">
+                      <p>{{ week1_day4_lesson7.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day4_lesson7.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day4_lesson7.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>8 <br> 15:05</td>
+              <td>{% if week1_day4_lesson8 != '' %}<span class="pair_name">
+                      <p>{{ week1_day4_lesson8.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day4_lesson8.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day4_lesson8.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>П'ятниця</td>
+            </tr>
+            <tr>
+              <td>1 <br> 08:30</td>
+              <td>{% if week1_day5_lesson1 != '' %}<span class="pair_name">
+                      <p>{{ week1_day5_lesson1.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day5_lesson1.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day5_lesson1.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>2 <br> 09:25</td>
+              <td>{% if week1_day5_lesson2 != '' %}<span class="pair_name">
+                      <p>{{ week1_day5_lesson2.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day5_lesson2.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day5_lesson2.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>3 <br> 10:20</td>
+              <td>{% if week1_day5_lesson3 != '' %}<span class="pair_name">
+                      <p>{{ week1_day5_lesson3.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day5_lesson3.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day5_lesson3.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>4 <br> 11:15</td>
+              <td>{% if week1_day5_lesson4 != '' %}<span class="pair_name">
+                      <p>{{ week1_day5_lesson4.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day5_lesson4.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day5_lesson4.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>5 <br> 12:20</td>
+              <td>{% if week1_day5_lesson5 != '' %}<span class="pair_name">
+                      <p>{{ week1_day5_lesson5.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day5_lesson5.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day5_lesson5.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>6 <br> 13:15</td>
+              <td>{% if week1_day5_lesson6 != '' %}<span class="pair_name">
+                      <p>{{ week1_day5_lesson6.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day5_lesson6.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day5_lesson6.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>7 <br> 14:10</td>
+              <td>{% if week1_day5_lesson7 != '' %}<span class="pair_name">
+                      <p>{{ week1_day5_lesson7.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day5_lesson7.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day5_lesson7.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+            <tr>
+              <td>8 <br> 15:05</td>
+              <td>{% if week1_day5_lesson8 != '' %}<span class="pair_name">
+                      <p>{{ week1_day5_lesson8.lesson_name.lesson_name }}</p>
+                  </span>
+              {% endif %}
+              <br>
+              <p>
+                  {{ week1_day5_lesson8.teacher|default_if_none:"" }}
+              </p>
+              <br>
+             <p>
+               {{ week1_day5_lesson8.room_number|default_if_none:"" }}
+             </p></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static 'js/colorDay.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script>
+      new WOW().init();
+    </script>
+
+  </body>
+</html>

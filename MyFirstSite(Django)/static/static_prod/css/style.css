@@ -1,0 +1,77 @@
+body p{
+	margin: 0; 
+}
+
+body{
+	background:#efefef;
+	}
+body .container{
+	width:100%;
+	}
+header{
+	margin-bottom:28px;
+	}
+header .overline{
+	background: #0C6B63;
+	height:5px;
+	margin:5px;
+	}
+section#navigation form input:nth-child(2){
+	margin-bottom: 5px;
+}
+section#navigation form input:nth-child(5){
+	margin-left: 33px;
+}
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.table-responsive table {
+    width: 100%; /* Ширина таблицы */
+    margin: auto; /* Выравниваем таблицу по центру окна  */
+    
+  
+}
+.now_week {
+	background: #ace2de;
+}
+
+.now_lesson {
+	background: #b0d751;
+}
+
+.next_lesson {
+	background: #ebcf81;
+}
+
+.table-responsive tbody>tr>td{
+	border: 1px solid #ddd;
+	padding: 8px;
+    line-height: 1.428571;
+    vertical-align: top;
+
+}
+
+.table-responsive tbody>tr:hover{
+	background: #f7f7f7;
+	border: 1px solid #ddd;
+	padding: 8px;
+    line-height: 1.428571;
+    vertical-align: top;
+
+}
+
+.table-responsive span{
+    display: inline-block;
+    white-space: normal !important;
+    color: #000 !important;
+    border: 1px solid #777 !important;
+    border-radius: 0.25em;
+    padding: 0.2em 0.6em 0.3em;
+}
+
+.table-responsive-off{
+	border: 5px;
+}
+
