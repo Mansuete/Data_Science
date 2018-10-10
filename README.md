@@ -1,6 +1,6 @@
 # Data_Science
 
-(BigARTM[a link](https://github.com/Mansuete/Data_Science/tree/master/BigARTM)) - Тематическое моделирование
+([BigARTM](https://github.com/Mansuete/Data_Science/tree/master/BigARTM)) - Тематическое моделирование
 
 (FlaskCatsAndDogs) - Веб страница, на которую загружается фото (кошки или щенка). Результатом анализа фото будет вероятность принадлежности объекта к классу кошка или щенок в процентах. Примеры использования
 
