@@ -10,7 +10,9 @@
 
 [MyFirstSite(Django)](https://github.com/Mansuete/Data_Science/tree/master/MyFirstSite(Django)) - Електронное расписание занятий для школы
 
-[NLTK](https://github.com/Mansuete/Data_Science/tree/master/NLTK) - Обработка текстовых данных, а именно человеческого языка
+[NLTK](https://github.com/Mansuete/Data_Science/tree/master/NLTK) - Обработка текстовых данных
+
+[PatternsPython](https://github.com/Mansuete/Data_Science/tree/master/PatternsPython) - Паттерны программирования
 
 [PyCharm_Works(NeuralNet)](https://github.com/Mansuete/Data_Science/tree/master/PyCharm_Works(NeuralNet)) - Работа с нейро сетями(не в Jupyter)
 
