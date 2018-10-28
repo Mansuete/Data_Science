@@ -17,3 +17,5 @@
 [PyCharm_Works(NeuralNet)](https://github.com/Mansuete/Data_Science/tree/master/PyCharm_Works(NeuralNet)) - Работа с нейро сетями(не в Jupyter)
 
 [Research_Institute](https://github.com/Mansuete/Data_Science/tree/master/Research_Institute) - Разные задачи обработки и анализа данных, построение моделей, кластеризации
+
+[Self_Driving_Car_GTAV](https://github.com/Mansuete/Data_Science/tree/master/Self_Driving_Car_GTAV) - Автопилот на транспортные средства. Инструмент Keras(CNN). Проект в процессе разработки 
