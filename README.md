@@ -4,6 +4,8 @@
 
 [FlaskCatsAndDogs](https://github.com/Mansuete/Data_Science/tree/master/FlaskCatsAndDogs) - Веб страница, на которую загружается фото (кошки или щенка). Результатом анализа фото будет вероятность принадлежности объекта к классу кошка или щенок в процентах. Примеры использования
 
+[Int20h_solution-master](https://github.com/Mansuete/Data_Science/tree/master/Keras) - Предсказание загружености районов Львовской области
+
 [Keras](https://github.com/Mansuete/Data_Science/tree/master/Keras) - Библиотека для работы с нейро сетями
 
 [Moscow_courses](https://github.com/Mansuete/Data_Science/tree/master/Moscow_courses)  - Разные задачи обработки и анализа данных, построение моделей, кластеризации, статистика, доверительные интервалы, проверка гипотез
